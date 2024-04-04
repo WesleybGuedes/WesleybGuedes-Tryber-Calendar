@@ -54,7 +54,7 @@ const changeHolidayColor = () => {
   });
 }
 
-changeColor();
+changeHolidayColor();
 
 const changeFridayColor = () => {
   const buttonsContainer = document.querySelector('#btn-friday');
