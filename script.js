@@ -72,3 +72,14 @@ const changeFridayColor = () => {
 
 changeFridayColor();
 
+const zoomIn = (event) => {
+  event.target.style.fontSize = '30px';
+}
+
+const zoomOut = (event) => {
+  event.target.style.fontSize = '20px';
+}
+
+const daysList = document.querySelector('#days');
+daysList.addEventListener('mouseover', zoomIn);
+daysList.addEventListener('mouseout', zoomOut);
