@@ -25,6 +25,9 @@ button {
 
 #days {
   margin: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #days li {
@@ -35,6 +38,15 @@ button {
   text-align: center;
   vertical-align: middle;
   width: 13.6%;
+}
+
+#days .day {
+  color: #777;
+  font-size: 20px;
+  margin: 5px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: calc(100% / 7);
 }
 
 .input-container {
@@ -77,16 +89,7 @@ label {
   width: 49%;
 }
 
-.my-tasks div {
-  border: 1px solid black;
-  border-radius: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: inline-block;
-  height: 35px;
-  margin-left: 10px;
-  vertical-align: middle;
-  width: 35px;
-}
+
 
 .my-tasks div:hover {
   height: 45px;
@@ -103,10 +106,13 @@ label {
 }
 
 .tasks-container {
+  display: flex;
   height: 130px;
   justify-content: center;
   text-align: center;
   width: 100%;
+  height: 100%;
+  margin-top: 20px;
 }
 
 .tasks-container h3 {
@@ -126,6 +132,22 @@ label {
   display: inline-block;
 }
 
+.my-tasks, .input-container, .task-list-container {
+  width: calc(50% - 20px);
+  margin: 10px;
+}
+
+.task {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.task:hover {
+  height: 45px;
+  width: 45px;
+}
+
 .task-list-container ul {
   list-style-type: none;
   padding: 0;
@@ -140,12 +162,19 @@ label {
   margin-left: 35px;
 }
 
+.week-days li, #days li {
+  color: #666;
+  text-align: center;
+  vertical-align: middle;
+  width: calc(100% / 7);
+}
+
 .week-days li {
   color: #666;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  width: 13.6%;
+  width: 15.6%;
 }
 
 .week-days {
