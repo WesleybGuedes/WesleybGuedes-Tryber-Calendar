@@ -40,7 +40,7 @@ const createCalendarDays = () => {
 
 createCalendarDays();
 
-const changeColor = () => {
+const changeHolidayColor = () => {
   const buttonsContainer = document.querySelector('#btn-holiday');
   buttonsContainer.addEventListener('click', () => {
     const holidays = document.querySelectorAll('.holiday');
@@ -55,4 +55,20 @@ const changeColor = () => {
 }
 
 changeColor();
+
+const changeFridayColor = () => {
+  const buttonsContainer = document.querySelector('#btn-friday');
+  buttonsContainer.addEventListener('click', () => {
+    const fridays = document.querySelectorAll('.friday');
+    for (let index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].style.backgroundColor === 'brown') {
+        fridays[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        fridays[index].style.backgroundColor = 'brown';
+      }
+    }
+  });
+}
+
+changeFridayColor();
 
