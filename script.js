@@ -83,3 +83,34 @@ const zoomOut = (event) => {
 const daysList = document.querySelector('#days');
 daysList.addEventListener('mouseover', zoomIn);
 daysList.addEventListener('mouseout', zoomOut);
+
+
+const taskDivs = document.querySelectorAll('.task');
+let selectedTask;
+
+for (let task of taskDivs) {
+  task.addEventListener('click', (event) => {
+    const currentSelectedTask = document.querySelector('.task.selected');
+    if (currentSelectedTask) {
+      currentSelectedTask.classList.remove('selected');
+    }
+    if (!currentSelectedTask || currentSelectedTask !== event.target) {
+      event.target.classList.add('selected');
+      selectedTask = event.target;
+    } else {
+      selectedTask = null;
+    }
+  });
+}
+
+daysList.addEventListener('click', (event) => {
+  if (selectedTask && event.target.classList.contains('day')) {
+    if (event.target.style.color === selectedTask.style.backgroundColor) {
+      event.target.style.color = 'rgb(119,119,119)';
+    } else {
+      event.target.style.color = selectedTask.style.backgroundColor;
+    }
+  }
+});
+
+
