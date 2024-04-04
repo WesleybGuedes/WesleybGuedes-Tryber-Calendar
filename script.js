@@ -56,22 +56,25 @@ const changeHolidayColor = () => {
 
 changeHolidayColor();
 
-const changeFridayColor = () => {
-  const buttonsContainer = document.querySelector('#btn-friday');
-  buttonsContainer.addEventListener('click', () => {
-    const fridays = document.querySelectorAll('.friday');
+const showHFridays = (fridaysArray) => {
+  const fridayButton = document.querySelector("#btn-friday");
+  const fridays = document.getElementsByClassName("friday");
+  const fridayText = "It is Friday-day!!! o/";
+
+  fridayButton.addEventListener("click", () => {
     for (let index = 0; index < fridays.length; index += 1) {
-      if (fridays[index].style.backgroundColor === 'brown') {
-        fridays[index].style.backgroundColor = 'rgb(238,238,238)';
+      if (fridays[index].innerHTML !== fridayText) {
+        fridays[index].innerHTML = fridayText;
       } else {
-        fridays[index].style.backgroundColor = 'brown';
+        fridays[index].innerHTML = fridaysArray[index];
       }
     }
   });
+};
+const decemberFridays = [4, 11, 18, 25];
+showHFridays(decemberFridays);
 
-}
 
-changeFridayColor();
 
 const zoomIn = (event) => {
   event.target.style.fontSize = '30px';
