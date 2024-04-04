@@ -68,6 +68,7 @@ const changeFridayColor = () => {
       }
     }
   });
+
 }
 
 changeFridayColor();
@@ -112,5 +113,35 @@ daysList.addEventListener('click', (event) => {
     }
   }
 });
+
+
+const buttonAdd = document.querySelector('#btn-add');
+const inputTask = document.querySelector('#task-input');
+const taskList = document.querySelector('#task-list');
+buttonAdd.addEventListener('click', () => {
+  if (inputTask.value === '') {
+    alert('Campo de tarefa vazio');
+  }
+  const task = document.createElement('li');
+  task.innerText = inputTask.value;
+  taskList.appendChild(task);
+  inputTask.value = '';
+});
+
+inputTask.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    if (inputTask.value === '') {
+      alert('Campo de tarefa vazio');
+    }
+    const task = document.createElement('li');
+    task.innerText = inputTask.value;
+    taskList.appendChild(task);
+    inputTask.value = '';
+  }
+}
+);
+
+
+
 
 
