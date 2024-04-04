@@ -39,3 +39,20 @@ const createCalendarDays = () => {
 }
 
 createCalendarDays();
+
+const changeColor = () => {
+  const buttonsContainer = document.querySelector('#btn-holiday');
+  buttonsContainer.addEventListener('click', () => {
+    const holidays = document.querySelectorAll('.holiday');
+    for (let index = 0; index < holidays.length; index += 1) {
+      if (holidays[index].style.backgroundColor === 'purple') {
+        holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        holidays[index].style.backgroundColor = 'purple';
+      }
+    }
+  });
+}
+
+changeColor();
+
