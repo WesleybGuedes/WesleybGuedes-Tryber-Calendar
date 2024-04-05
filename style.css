@@ -124,6 +124,16 @@ label {
   letter-spacing: 3px;
 }
 
+/* Estilos para o alert */
+.alert {
+  background-color: #f8d7da; /* Cor de fundo vermelha */
+  color: #721c24; /* Cor do texto vermelha */
+  border: 1px solid #f5c6cb; /* Borda vermelha */
+  padding: 8px 12px; /* Espaçamento interno */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+
 .task-list {
   margin-top: 20px;
 }

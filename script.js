@@ -89,7 +89,7 @@ const addButtonClickListener = () => {
 
   const addTask = () => {
     if (inputTask.value === '') {
-      alert('Campo de tarefa vazio');
+      alert('Campo vazio! Por favor, preencha o campo de tarefa.')
       return;
     }
 
@@ -97,6 +97,12 @@ const addButtonClickListener = () => {
     task.textContent = inputTask.value;
     taskList.appendChild(task);
     inputTask.value = '';
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Tarefa adicionada!',
+      text: 'Sua tarefa foi adicionada com sucesso.',
+    });
   }
 
   buttonAdd.addEventListener('click', addTask);
@@ -106,6 +112,7 @@ const addButtonClickListener = () => {
     }
   });
 }
+
 
 const init = () => {
   createDaysOfTheWeek();
