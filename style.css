@@ -136,7 +136,8 @@ label {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  margin-right: 10px; /* Espaçamento entre a bola e o texto */
+  margin-right: 10px;
+  border: 1px solid black;
 }
 
 
