@@ -82,18 +82,10 @@ label {
 }
 
 .my-tasks {
-  clear: both;
-  float: left;
-  height: 100px;
-  vertical-align: middle;
-  width: 49%;
-}
-
-
-
-.my-tasks div:hover {
-  height: 45px;
-  width: 45px;
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ background-color: white;
 }
 
 .my-tasks span {
@@ -103,6 +95,7 @@ label {
   letter-spacing: 3px;
   padding-bottom: 10px;
   vertical-align: middle;
+
 }
 
 .tasks-container {
@@ -124,20 +117,6 @@ label {
   letter-spacing: 3px;
 }
 
-/* Estilos para o alert */
-.alert {
-  background-color: #f8d7da; /* Cor de fundo vermelha */
-  color: #721c24; /* Cor do texto vermelha */
-  border: 1px solid #f5c6cb; /* Borda vermelha */
-  padding: 8px 12px; /* Espaçamento interno */
-  border-radius: 4px; /* Borda arredondada */
-}
-
-
-.task-list {
-  margin-top: 20px;
-}
-
 .task-list-container {
   display: inline-block;
 }
@@ -147,16 +126,19 @@ label {
   margin: 10px;
 }
 
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .task {
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  margin-right: 10px; /* Espaçamento entre a bola e o texto */
 }
 
-.task:hover {
-  height: 45px;
-  width: 45px;
-}
 
 .task-list-container ul {
   list-style-type: none;

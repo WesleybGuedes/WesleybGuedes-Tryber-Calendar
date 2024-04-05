@@ -30,14 +30,14 @@
     <button id="btn-friday" class="btn btn-primary mx-2">Sexta-feira</button>
   </div>
   <section class="tasks-container mt-3">
-    <div class="my-tasks bg-light p-3">
+    <div class="my-tasks p-3">
       <h3 class="text-primary mb-3">MINHAS TAREFAS</h3>
-      <div class="d-flex align-items-center mb-2">
-        <div class="task mr-5" style="background-color: rgb(0, 128, 0);"></div>
+      <div class="task-item">
+        <div class="task" style="background-color: rgb(0, 128, 0);"></div>
         <span class="text-muted">projeto</span>
       </div>
-      <div class="d-flex align-items-center">
-        <div class="task mr-5" style="background-color: rgb(255, 0, 0);"></div>
+      <div class="task-item">
+        <div class="task" style="background-color: rgb(255, 0, 0);"></div>
         <span class="text-muted">exercícios</span>
       </div>
     </div>
@@ -47,7 +47,7 @@
         <label for="task-input" class="text-muted">Novo:</label>
         <input type="text" id="task-input" class="form-control" placeholder="Escreva seu compromisso">
       </div>
-      <button id="btn-add" class="btn btn-primary ">Adicionar</button>
+      <button id="btn-add" class="btn btn-primary">Adicionar</button>
     </div>
     <div class="task-list-container bg-light p-3">
       <h3 class="text-primary mb-3">Lista de Tarefas</h3>
@@ -55,6 +55,7 @@
       </ul>
     </div>
   </section>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="script.js"></script>
 </body>
