@@ -45,7 +45,7 @@ const changeHolidayColor = () => {
 const showHFridays = (fridaysArray) => {
   const fridayButton = document.querySelector("#btn-friday");
   const fridays = document.getElementsByClassName("friday");
-  const fridayText = "It is Friday-day!!! o/";
+  const fridayText = "Sextou!!!";
 
   fridayButton.addEventListener("click", () => {
     Array.from(fridays).forEach((friday, index) => {
